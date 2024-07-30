@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" integrity="sha512-MqL4+Io386IOPMKKyplKII0pVW5e+kb+PI/I3N87G3fHIfrgNNsRpzIXEi+0MQC0sR9xZNqZqCYVcC61fL5+Vg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="script.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css" integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous"/>
     <link rel="stylesheet" href="style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/solid.js" integrity="sha384-/BxOvRagtVDn9dJ+JGCtcofNXgQO/CCCVKdMfL115s3gOgQxWaX/tSq5V8dRgsbc" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/fontawesome.js" integrity="sha384-dPBGbj4Uoy1OOpM4+aRGfAOc0W37JkROT+3uynUgTHZCHZNMHfGXsmmvYTffZjYO" crossorigin="anonymous"></script>
+
     <title>Portafolio</title>
 </head>
 <body>
   
-    <nav>
+    <nav class="container">
         <div class="nav-logo">
             <a href="#">
                 <img src="images/logo.png">
@@ -25,34 +30,37 @@
             <li class="link"><a href="#educacionexperiencia">Educacion y Experiencia laboral</a></li>
             <li class="link"><a href="#proyectos">Proyectos</a></li>
         </ul>
-        <ul class="nav-social-media">
+        <!--<ul class="nav-social-media">
             <li class="social-media"><a href="https://github.com/nicolasloventordp" target="_blank"><i class="ri-github-fill"></i></a></li>
             <li class="social-media"><a href="https://www.linkedin.com/in/nicolas-lovento/" target="_blank"><i class="ri-linkedin-box-fill"></i></a></li>
-        </ul>
+        </ul>-->
     </nav>
     <!--HOME-->
-    <header class="container" id="home">
+    <header class="container animation-show" id="home">
         <div class="content">
             <span class="blur"></span>
             <span class="blur"></span>
-            <h4>CREATE YOUR SITE LIKE A PRO</h4>
+            <h4>Bienvenido a mi web personal</h4>
             <h1>Hola, Mi nombre es <span>Nicolás</span>, soy Desarrollador Web</h1>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro necessitatibus labore consequuntur doloremque odit vel unde iste! Temporibus iure aliquid totam accusantium nemo sunt voluptate voluptas minus nisi? Expedita, unde!
+                Programador apasionado por la técnología con más de 4 años de experiencia en el desarrollo de aplicaciones web, 
+                participando tanto de la parte Front-End como Back-End. Te invito a que descargues mi CV para conocerme más.               
             </p>
-            <button class="btn">Get Started</button>
+            <div class="content__btn">
+                <button class="btn">Descargar cv</button>
+            </div>
         </div>
         <div class="image">
             <img src="images/header.png" >
         </div>
     </header>
     <!--CONOCIMIENTOS-->
-    <section class="container" id="conocimientos">
+    <section class="container animation-show" id="conocimientos">
         <h4 class="header">Conocimientos</h4>
         <div class="conocimientos">
             <div class="left">
                 <div class="info">
-                    <h3>What Mys Programming Skills Included?</h3>
+                    <h3>Cuáles son mis conocimientos en programación?</h3>
                     <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. A cum itaque perspiciatis eos iure ullam, ex dolorem quia quasi ea, aliquid qui aliquam delectus! 
                     </p>
@@ -60,13 +68,13 @@
             </div>
             <div class="right">
                 <div class="item">
-                    <i class="ri-html5-fill color-javascript"></i>
+                    <i class="ri-html5-fill"></i>
                 </div>
                 <div class="item">
                     <i class="ri-css3-fill"></i>
                 </div>
                 <div class="item">
-                    <i class="ri-html5-fill color-javascript"></i>
+                    <i class="fa-brands fa-php"></i>
                 </div>
                 <div class="item">
                     <i class="ri-html5-fill color-javascript"></i>
@@ -81,7 +89,7 @@
         </div>
     </section>
     <!--EDUCACION Y EXPERIENCIA-->
-    <section class="container" id="educacionexperiencia">
+    <section class="container animation-show" id="educacionexperiencia">
         <h4 class="header">Educación y Experiencia laboral</h4>
         <div class="switch-button">
             <span class="active"></span>
@@ -138,20 +146,68 @@
         </div>
     </section>
     <!--PROYECTOS-->
-    <section class="container" id="proyectos">
+    <section class="container animation-show" id="proyectos">
         <h4 class="header">Proyectos</h4>
         <div class="grid-proyectos">
-            <div class="card-proyecto">
-
-            </div>
-            <div class="card-proyecto">
-                
-            </div>
-            <div class="card-proyecto">
-                
-            </div>
+            <a class="card" href="#">
+                <img src="images/proyecto-portafolio.png" >
+                <div class="card-info">
+                    <h3>This is option </h3>
+                    <p class="small">Card description with lots of great facts and interesting details.</p>
+                </div>
+                <div class="go-corner" href="#">
+                    <div class="go-arrow">
+                        <i class="ri-arrow-right-line"></i>
+                    </div>
+                </div>
+            </a>
+            <a class="card" href="#">
+                <img src="images/proyecto-portafolio.png" >
+                <div class="card-info">
+                    <h3>This is option </h3>
+                    <p class="small">Card description with lots of great facts and interesting details.</p>
+                </div>
+                <div class="go-corner" href="#">
+                    <div class="go-arrow">
+                        <i class="ri-arrow-right-line"></i>
+                    </div>
+                </div>
+            </a>
+            <a class="card" href="#">
+                <img src="images/proyecto-portafolio.png" >
+                <div class="card-info">
+                    <h3>This is option </h3>
+                    <p class="small">Card description with lots of great facts and interesting details.</p>
+                </div>
+                <div class="go-corner" href="#">
+                    <div class="go-arrow">
+                        <i class="ri-arrow-right-line"></i>
+                    </div>
+                </div>
+            </a>
         </div>
     </section>
-    
+    <!--CONTACTO-->
+    <section class="container animation-show" id="contacto">
+        <h4 class="header">Contacto</h4>
+        <div class="form" id="form">
+            <form>
+                <div class="form-input">
+                    <label for="from_name">Nombre:</label>
+                    <input type="text" name="from_name" id="from_name"/>
+                </div>
+                <div class="form-input">
+                    <label for="email_id">Email:</label>
+                    <input type="email" name="email_id" id="email_id"/>
+                </div>
+                <div class="form-input">
+                    <label for="message">Mensaje:</label>
+                    <textarea name="message" id="message"></textarea>
+                </div>
+                <button value="Enviar" id="btn-form" onclick="enviarEmail(event)">Enviar</button>
+            </form>
+        </div>
+    </section>
+    <script src="script.js"></script>
 </body>
 </html>
