@@ -47,7 +47,7 @@ body{
 .container{
     max-width: 1200px;
     margin: auto;
-    padding: 5rem 2rem;
+    padding: 4rem 2rem;
 }
 
 .blur{
@@ -85,6 +85,7 @@ nav{
     gap: 2rem;
     height: 100px;
     padding: 0 !important;
+    margin: 0 !important;
 }
 
 .nav-logo{
@@ -119,24 +120,12 @@ nav{
 .link a:hover::after{
     width: 70%;
 }
-
-/*.nav-social-media{
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.social-media a{
-    position: relative;
-    padding-bottom: 0.75rem;
-    color: #fff;
-}
-
-.social-media > a > i{
-    font-size: 1.5rem;
-}*/
 /** HOME **/
+#home{
+    height: calc(100vh - 120px);
+    margin-top: 0;
+}
+
 header{
     position: relative;
     padding-top: 2rem;
@@ -146,14 +135,10 @@ header{
     gap: 2rem;
 }
 
-#home{
-    height: calc(100vh - 100px);
-}
-
 header .content{
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
 }
 
 header .content h4{
@@ -180,6 +165,7 @@ header .content h1{
         transform: translateX(0px);
     }
 }
+
 header .content h1 span{
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px #fff;
@@ -226,7 +212,7 @@ header .image img{
     font-weight: 600;
 }*/
 
-section .header{
+section .etiqueta{
     border: 1px solid #ccc;
     border-radius: 10px;
     width: max-content;
@@ -235,12 +221,10 @@ section .header{
     font-weight: 400;
     color: #fff;
 }
+
 /* CONOCIMIENTOS */
 .conocimientos{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 3rem;
-    
+    margin-bottom: 0;
 }
 
 #conocimientos h4{
@@ -251,23 +235,23 @@ section .header{
     box-shadow: 0px 0px 10px 6px var(--color-blue-2);
 }
 
-.conocimientos .left{
+.conocimientos__content .left{
     width: 680px;
 }
 
-.conocimientos .left .info h3{
+.conocimientos__content .left .info h3{
     color: #fff;
     font-size: 1.5rem;
 
 }
 
-.conocimientos .left .info p{
+.conocimientos__content .left .info p{
     color: #ccc;
     font-size: 1rem;
     margin-top: 1rem;
 }
 
-.conocimientos .right{
+.conocimientos__content .right{
     width: 520px;
     height: 120px;
     display: flex;
@@ -277,7 +261,7 @@ section .header{
     gap: 12px;
 }
 
-.conocimientos .right .item{
+.conocimientos__content .right .item{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -287,14 +271,22 @@ section .header{
     border-radius: 10px;
 }
 
-.conocimientos .right .item i{
+.conocimientos__content .right .item i{
     font-size: 2.4rem;
 }
 .ri-html5-fill{
-    color: #f0DB4F;
+    color: #ff5733;
 }
 .ri-css3-fill{
     color: #264de4;
+}
+
+.color-js{
+    color: #f7df1e;
+}
+
+.color-bootstrap{
+    color: #563d7c;
 }
 
 .color-php{
@@ -325,6 +317,7 @@ section .header{
 }
 /* EDUCACION Y EXPERIENCIA */
 #educacionexperiencia{
+    margin-top: 0;
 }
 
 .switch-button{
