@@ -2,38 +2,11 @@ $(document).ready(function() {
 	emailjs.init({
 		publicKey: "QmH-HASr6BtPvF05X",
 	});
-	var switchButton = document.querySelector('.switch-button');
 	var switchBtnRight = document.querySelector('.switch-button-case.right');
 	var switchBtnLeft = document.querySelector('.switch-button-case.left');
 	var activeSwitch = document.querySelector('.active');
 	var educacion = document.querySelector('.educacion');
 	var experiencia = document.querySelector('.experiencia');
-
-function switchLeft(){
-	switchBtnRight.classList.remove('active-case');
-	switchBtnLeft.classList.add('active-case');
-	activeSwitch.style.left = '0%';
-	educacion.classList.add('hidden');
-	experiencia.classList.remove('hidden');
-}
-
-function switchRight(){
-	switchBtnRight.classList.add('active-case');
-	switchBtnLeft.classList.remove('active-case');
-	activeSwitch.style.left = '50%';
-	experiencia.classList.add('hidden');
-	educacion.classList.remove('hidden');
-}
-
-switchBtnLeft.addEventListener('click', function(){
-	switchLeft();
-}, false);
-
-switchBtnRight.addEventListener('click', function(){
-	switchRight();
-}, false);
-
-
 });
 
 function enviarEmail(event){
@@ -45,12 +18,48 @@ function enviarEmail(event){
 		email_id: document.getElementById('email_id').value,
 		message: document.getElementById('message').value
 	};
-	emailjs.send(serviceID,templateID,templateParams).then(
-		() => {
-			alert("send");
-		},
-		(err) => {
-			alert(err);
-		} 
-	)
+	
+	if(validarFormulario(templateParams)){
+		document.getElementById('btn-form').style.display = 'none';
+		document.getElementById('btn-loading').style.display = 'block';
+		emailjs.send(serviceID,templateID,templateParams).then(
+			() => {
+				document.getElementById('btn-loading').style.display = 'none';
+				document.getElementById('btn-form').style.display = 'none';
+				document.getElementById('message-success').style.display = 'block';
+			},
+			(err) => {
+				alert(err);
+			} 
+		)
+	};
+	
 }
+
+function validarFormulario(params){
+	Object.keys(params).forEach(function(key) {
+		document.getElementById(key+'-error').style.display = "none";
+	});
+	let error = 1;
+	Object.keys(params).forEach(function(key) {
+		if(params[key] == ""){
+			document.getElementById(key+'-error').innerHTML = "* El campo es requerido";
+			document.getElementById(key+'-error').style.display = "block";
+			error = 0;
+		}
+		if(params[key] != "" && key == 'email_id'){
+			if(!validateEmail(params[key])){
+				document.getElementById(key+'-error').innerHTML = "* El email es incorrecto";
+				document.getElementById(key+'-error').style.display = "block";
+				error = 0;
+			}
+				
+		}
+	});
+	return error;
+}
+
+function validateEmail(email) {
+	var re = /\S+@\S+\.\S+/;
+	return re.test(email);
+  }

@@ -9,6 +9,7 @@
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     
 
@@ -16,7 +17,7 @@
 </head>
 <body>
   
-    <nav class="container">
+    <nav class="nav container">
         <div class="nav-logo">
             <a href="#">
                 <img src="images/logo.png">
@@ -53,51 +54,58 @@
         </div>
     </header>
     <!--CONOCIMIENTOS-->
-    <section class="conocimientos container animation-show" id="conocimientos">
+    <section class="container animation-show" id="conocimientos">
         <h4 class="etiqueta">Conocimientos</h4>
         <div class="conocimientos__content">
-            <div class="left">
-                <div class="info">
-                    <h3>Cuáles son mis conocimientos en programación?</h3>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. A cum itaque perspiciatis eos iure ullam, ex dolorem quia quasi ea, aliquid qui aliquam delectus! 
-                    </p>
-                </div>
+            <div class="texto">
+                <h3>¿Cuáles son mis conocimientos en programación?</h3>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. A cum itaque perspiciatis eos iure ullam, ex dolorem quia quasi ea, aliquid qui aliquam delectus! Lorem ipsum dolor, sit amet consectetur adipisicing elit. A cum itaque perspiciatis eos iure ullam, ex dolorem quia quasi ea, aliquid qui aliquam delectus! Lorem ipsum dolor, sit amet consectetur adipisicing elit. A cum itaque perspiciatis eos iure ullam, ex dolorem quia quasi ea, aliquid qui aliquam delectus! 
+                </p>
             </div>
-            <div class="right">
+            <div class="conocimientos__cards">
                 <div class="item">
                     <i class="ri-html5-fill"></i>
+                    <p>html</p>
                 </div>
                 <div class="item">
                     <i class="ri-css3-fill"></i>
+                    <p>css</p>
                 </div>
                 <div class="item">
                     <i class="fa-brands fa-js color-js"></i>
+                    <p>javascript</p>
                 </div>
                 <div class="item">
                     <i class="ri-bootstrap-fill color-bootstrap"></i>
+                    <p>bootstrap</p>
                 </div>
                 <div class="item">
                     <i class="ri-reactjs-line color-react"></i>
+                    <p>react</p>
                 </div>
                 <div class="item">
                     <i class="fa-brands fa-php color-php"></i>
+                    <p>php</p>
                 </div>
                 <div class="item">
                     <i class="fa-solid fa-database"></i>
+                    <p>base de datos</p>
                 </div>
                 <div class="item">
-                    <i class="fa-brands fa-figma"></i>
+                    <i class="fa-brands fa-figma color-figma"></i>
+                    <p>figma</p>
                 </div>
                 <div class="item">
                     <i class="fa-brands fa-git"></i>
+                    <p>giy</p>
                 </div>
             </div>
         </div>
     </section>
     <!--EDUCACION Y EXPERIENCIA-->
-    <section class="container animation-show" id="educacionexperiencia">
-        <h4 class="header">Educación y Experiencia laboral</h4>
+    <!--<section class="container animation-show" id="educacionexperiencia">
+        <h4 class="etiqueta">Educación y Experiencia laboral</h4>
         <div class="switch-button">
             <span class="active"></span>
             <button class="switch-button-case left active-case">Experiencia</button>
@@ -151,9 +159,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
     <!--PROYECTOS-->
-    <section class="container animation-show" id="proyectos">
+    <!--<section class="container animation-show" id="proyectos">
         <h4 class="header">Proyectos</h4>
         <div class="grid-proyectos">
             <a class="card" href="#">
@@ -193,28 +201,105 @@
                 </div>
             </a>
         </div>
-    </section>
+    </section>-->
     <!--CONTACTO-->
     <section class="container animation-show" id="contacto">
-        <h4 class="header">Contacto</h4>
-        <div class="form" id="form">
-            <form>
-                <div class="form-input">
-                    <label for="from_name">Nombre:</label>
-                    <input type="text" name="from_name" id="from_name"/>
+        <h4 class="etiqueta">Contacto</h4>
+        <div class="grid-contacto">
+            <div class="info-contacto">
+                <div class="info-contacto__item">
+                    <i class="ri-phone-line"></i>
+                    <span class="info-contacto__item-title">Telefono</span>
+                    <span class="info-contacto__item-texto">1158659304</span>
                 </div>
-                <div class="form-input">
-                    <label for="email_id">Email:</label>
-                    <input type="email" name="email_id" id="email_id"/>
+                <div class="info-contacto__item">
+                    <i class="ri-phone-line"></i>
+                    <span class="info-contacto__item-title">Telefono</span>
+                    <span class="info-contacto__item-texto">1158659304</span>
                 </div>
-                <div class="form-input">
-                    <label for="message">Mensaje:</label>
-                    <textarea name="message" id="message"></textarea>
+                <div class="info-contacto__item">
+                    <i class="ri-phone-line"></i>
+                    <span class="info-contacto__item-title">Telefono</span>
+                    <span class="info-contacto__item-texto">1158659304</span>
                 </div>
-                <button value="Enviar" id="btn-form" onclick="enviarEmail(event)">Enviar</button>
-            </form>
+                <div class="info-contacto__item">
+                    <i class="ri-phone-line"></i>
+                    <span class="info-contacto__item-title">Telefono</span>
+                    <span class="info-contacto__item-texto">1158659304</span>
+                </div>
+            </div>
+            <div class="form-contacto" id="form">
+                <span>Enviame un email</span>
+                <form>
+                    <div>
+                        <div class="form-input">
+                            <input type="text" name="from_name" id="from_name" placeholder="Nombre..."/>
+                            <span class="error" id="from_name-error">Error: asdsad</span>
+                        </div>
+                        <div class="form-input">
+                            <input type="email" name="email_id" id="email_id" placeholder="Email..."/>
+                            <span class="error" id="email_id-error">Error: asdsad</span>
+                        </div>
+                    </div>
+                    <div class="form-input">
+                        <textarea name="message" id="message" placeholder="Escriba su mensaje aquí..."></textarea>
+                        <span class="error" id="message-error">Error: asdsad</span>
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button value="Enviar" id="btn-form" onclick="enviarEmail(event)">Enviar</button>
+                        <button class="buttonload" id="btn-loading">
+                            <i class="fa fa-circle-o-notch fa-spin"></i>Enviando
+                        </button>
+                        <span class="msj-success" id="message-success">Su mensaje fue enviado!</span>
+                    </div>
+                    
+                </form>
+                
+            </div>
+         
+                <!--<div class="info-contacto__photo">
+                    <img src="images/me.png">
+                </div>
+                <div class="info-contacto__items">
+                    <div>
+                        <span class="title"><i class="ri-phone-line"></i>Telefono</span>
+                        <span class="description">1158659304</span>
+                    </div>
+                    <div>
+                        <span class="title"><i class="ri-mail-line"></i>Email</span>
+                        <span class="description">nicolaslovento.94@gmail.com</span>
+                    </div>
+                    <div>
+                        <span class="title"><i class="ri-mail-line"></i>Email</span>
+                        <span class="description">nicolaslovento.94@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-contacto" id="form">
+                <form>
+                    <div class="form-input">
+                        <label for="from_name">Nombre:</label>
+                        <input type="text" name="from_name" id="from_name" placeholder="Nombre..."/>
+                        <span class="error" id="from_name-error">Error: asdsad</span>
+                    </div>
+                    <div class="form-input">
+                        <label for="email_id">Email:</label>
+                        <input type="email" name="email_id" id="email_id" placeholder="Email..."/>
+                        <span class="error" id="email_id-error">Error: asdsad</span>
+                    </div>
+                    
+                    <div class="form-input">
+                        <label for="message">Mensaje:</label>
+                        <textarea name="message" id="message" placeholder="Mensaje..."></textarea>
+                        <span class="error" id="message-error">Error: asdsad</span>
+                    </div>
+                    <button value="Enviar" id="btn-form" onclick="enviarEmail(event)">Enviar</button>
+                </form>
+            </div>-->
         </div>
     </section>
+    <footer></footer>
     <script src="script.js"></script>
 </body>
 </html>
