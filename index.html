@@ -27,7 +27,7 @@
             <li class="link"><a href="#home">Home</a></li>
             <li class="link"><a href="#conocimientos">Conocimientos</a></li>
             <li class="link"><a href="#educacionexperiencia">Educacion y Experiencia laboral</a></li>
-            <li class="link"><a href="#proyectos">Proyectos</a></li>
+            <li class="link"><a href="#contacto">Contacto</a></li>
         </ul>
         <!--<ul class="nav-social-media">
             <li class="social-media"><a href="https://github.com/nicolasloventordp" target="_blank"><i class="ri-github-fill"></i></a></li>
@@ -43,7 +43,7 @@
             <h1>Hola, Mi nombre es <span>Nicolás</span>, soy Desarrollador Web</h1>
             <p>
                 Programador apasionado por la técnología con más de 4 años de experiencia en el desarrollo de aplicaciones web, 
-                participando tanto de la parte Front-End como Back-End. Te invito a que descargues mi CV para conocerme más.               
+                participando tanto de la parte Front-End como Back-End. Te invito a que descargues mi CV para conocerme más!               
             </p>
             <div class="content__btn">
                 <button class="btn">Descargar cv</button>
@@ -55,7 +55,7 @@
     </header>
     <!--CONOCIMIENTOS-->
     <section class="container animation-show" id="conocimientos">
-        <h4 class="etiqueta">Conocimientos</h4>
+        <!--<h4 class="etiqueta">Conocimientos</h4>-->
         <div class="conocimientos__content">
             <div class="texto">
                 <h3>¿Cuáles son mis conocimientos en programación?</h3>
@@ -204,32 +204,32 @@
     </section>-->
     <!--CONTACTO-->
     <section class="container animation-show" id="contacto">
-        <h4 class="etiqueta">Contacto</h4>
+    <!--<h4 class="etiqueta">Contacto</h4>-->
         <div class="grid-contacto">
             <div class="info-contacto">
                 <div class="info-contacto__item">
                     <i class="ri-phone-line"></i>
-                    <span class="info-contacto__item-title">Telefono</span>
+                    <span class="info-contacto__item-title">Teléfono</span>
                     <span class="info-contacto__item-texto">1158659304</span>
                 </div>
                 <div class="info-contacto__item">
-                    <i class="ri-phone-line"></i>
-                    <span class="info-contacto__item-title">Telefono</span>
-                    <span class="info-contacto__item-texto">1158659304</span>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span class="info-contacto__item-title">Ubicación</span>
+                    <span class="info-contacto__item-texto">Avellaneda, Buenos aires</span>
                 </div>
                 <div class="info-contacto__item">
-                    <i class="ri-phone-line"></i>
-                    <span class="info-contacto__item-title">Telefono</span>
-                    <span class="info-contacto__item-texto">1158659304</span>
+                    <i class="fa-regular fa-envelope"></i>
+                    <span class="info-contacto__item-title">Email</span>
+                    <span class="info-contacto__item-texto">nicolaslovento.94@gmail.com</span>
                 </div>
                 <div class="info-contacto__item">
-                    <i class="ri-phone-line"></i>
-                    <span class="info-contacto__item-title">Telefono</span>
-                    <span class="info-contacto__item-texto">1158659304</span>
+                    <i class="fa-solid fa-globe"></i>
+                    <span class="info-contacto__item-title">Sitio Web</span>
+                    <span class="info-contacto__item-texto">www.mipagina.com</span>
                 </div>
             </div>
             <div class="form-contacto" id="form">
-                <span>Enviame un email</span>
+                <span>Enviame un mensaje!</span>
                 <form>
                     <div>
                         <div class="form-input">
@@ -247,8 +247,8 @@
                     </div>
                     
                     <div class="form-buttons">
-                        <button value="Enviar" id="btn-form" onclick="enviarEmail(event)">Enviar</button>
-                        <button class="buttonload" id="btn-loading">
+                        <button value="Enviar" class="btn" id="btn-form" onclick="enviarEmail(event)">Enviar</button>
+                        <button class="btn" id="btn-loading">
                             <i class="fa fa-circle-o-notch fa-spin"></i>Enviando
                         </button>
                         <span class="msj-success" id="message-success">Su mensaje fue enviado!</span>

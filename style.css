@@ -6,6 +6,11 @@
     --color-blue-3: #2859ad;
     --color-blue-4: #002c74;
     --color-blue-5: #00003d;
+    --color-black-1: #b8b8b8;
+    --color-black-2: #898989;
+    --color-black-3: #424242;
+    --color-black-4: #2a2a2a;
+    --color-black-5: #131313;
     
 }
 *{
@@ -14,6 +19,7 @@
     outline: none;
     border: none;
     box-sizing: border-box;
+    font-size: 1rem;
 }
 
 img{
@@ -27,27 +33,25 @@ a{
 
 body{
     font-family: 'Poppins', sans-serif;
-    background-color: #131313;
+    background-color: var(--color-black-5);
 }
 
 .btn{
-    padding: 10px 20px;
-    border-radius: 6px;
-    color: #ccc;
-    text-transform: uppercase;
-    background: var(--color-blue-3);
-    font-family: 'Poppins';
-    /*box-shadow: 0px 0px 10px 6px rgb(104 87 232 / 60%);*/
-    width: 180px;
-    font-weight: 700;
-    letter-spacing: 1px;
+    background: none;
+    color: #fff;
+    margin: auto;
+    width: 160px;
+    padding: 0.4rem;
+    font-family: 'poppins';
     cursor: pointer;
+    border-radius: 0.8rem;
+    border: 1px solid var(--color-blue-2);
 }
 
 .container{
     max-width: 1200px;
     margin: auto;
-    padding: 4rem 2rem;
+    padding: 2rem;
 }
 
 .blur{
@@ -141,14 +145,14 @@ header .content{
 
 header .content h4{
     color: #ccc;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 600;
     letter-spacing: 1px;
 }
 
 header .content h1{
     color: #fff;
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     font-weight: 700;
     line-height: 5rem;
     letter-spacing: 1px;
@@ -157,7 +161,7 @@ header .content h1{
 
 @keyframes move-left-right {
     from{
-        transform: translateX(-200px);
+        transform: translateX(-300px);
     }
     to{
         transform: translateX(0px);
@@ -223,27 +227,23 @@ section .etiqueta{
 }
 
 /* CONOCIMIENTOS */
-#conocimientos{
-    margin-bottom: 0;
+section#conocimientos{
+    background: var(--color-black-4);
+    padding: 8rem 2rem;
 }
-
 #conocimientos h4{
     transition: all 0.6s ease;
 }
-
 #conocimientos:hover h4{
     box-shadow: 0px 0px 14px 0px var(--color-blue-2);
 }
-
 #conocimientos .conocimientos__content{
     display: flex;
     flex-direction: column;
-    margin-top: 5rem;
 }
 .conocimientos__content .texto{
     text-align: center;
 }
-
 .conocimientos__content .texto h3{
     color: #fff;
     font-size: 2rem;
@@ -253,7 +253,6 @@ section .etiqueta{
 
 .conocimientos__content .texto p{
     color: #ccc;
-    font-size: 1.1rem;
     line-height: 1.7rem;
     letter-spacing: 1px;
     margin-bottom: 3rem;
@@ -269,10 +268,10 @@ section .etiqueta{
 
 .conocimientos__content .conocimientos__cards .item{
     display: grid;
-    grid-template-rows: 80px 40px;
+    grid-template-rows: 70px 30px;
     background: #383e4524;
-    width: 140px;
-    height: 120px;
+    width: 130px;
+    height: 100px;
     border-radius: 10px;
     box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
     cursor: pointer;
@@ -289,15 +288,15 @@ section .etiqueta{
 }
 
 .conocimientos__content .conocimientos__cards .item i{
-    font-size: 3.6rem;
+    font-size: 2.6rem;
     margin: auto;
 }
 
 .conocimientos__content .conocimientos__cards .item p{
     margin: auto;
     text-transform: uppercase;
-    font-size: 0.9rem;
     color: #fff;
+    font-size: 0.9rem;
 }
 
 .ri-html5-fill{
@@ -337,7 +336,6 @@ section .etiqueta{
 
 .conocimientos .card h4{
    color: #fff;
-   font-size: 1.2rem;
    font-weight: 600;
 }
 
@@ -354,71 +352,6 @@ section .etiqueta{
 #educacionexperiencia:hover h4{
     box-shadow: 0px 0px 14px 0px var(--color-blue-2);
 }
-.switch-button{
-    width: 300px;
-	height: 40px;
-	text-align: center;
-	position: relative;
-	left: 50%;
-	top: 50%;
-	transform: translate3D(-50%, -50%, 0);
-	cursor: pointer;
-	transition: .3s ease all;
-	border: 1px solid white;
-    border-radius: 15px;
-}
-
-.active {
-    color: #fff;
-    background-color: #1d4ed8;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    z-index: -1;
-    transition: .3s ease-out all;
-    border-radius: 13px;
-    border: 1px solid white;
-}
-
-.active-case{
-    color: #fff;
-}
-
-.switch-button button{
-    font-size: 0.9rem;
-    font-family: 'Poppins';
-    letter-spacing: 1px;
-}
-
-.switch-button-case{
-	display: inline-block;
-	background: none;
-	width: 49%;
-	height: 100%;
-	color: white;
-	position: relative;
-	border: none;
-	transition: .3s ease all;
-	text-transform: uppercase;
-	padding-bottom: 1px;
-}
-
-.switch-button-case:hover{
-    color: grey;
-    cursor: pointer;
-}
-
-.switch-button-case:focus {
-    outline: none;
-}
-.switch-display{
-    width: 600px;
-    height: 400px;
-    margin: auto;
-    position: relative;
-}
 
 .educacion{
     margin-top: 2rem; 
@@ -428,7 +361,6 @@ section .etiqueta{
 
 .educacion .title{
     color: #ccc;
-    font-size: 1.1rem;
     font-weight: 700;
     display: block;
 }
@@ -499,7 +431,6 @@ section .etiqueta{
 }*/
 h3{
     color: #ccc;
-    font-size: 17px;
     line-height: 24px;
     font-weight: 700;
     margin-bottom: 4px;
@@ -507,7 +438,6 @@ h3{
 }
   
 p{
-    font-size: 17px;
     font-weight: 400;
     line-height: 20px;
     color: #ccc;
@@ -637,20 +567,20 @@ p.small{
 }
 
 .grid-contacto .info-contacto .info-contacto__item i{
-    font-size: 3rem;
+    font-size: 2.6rem;
     color: var(--color-blue-3);
     margin-bottom: 0.6rem;
 }
 
 .grid-contacto .info-contacto .info-contacto__item .info-contacto__item-title{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: var(--color-blue-3);
     font-weight: 700;
 }
 
 .grid-contacto .info-contacto .info-contacto__item .info-contacto__item-texto{
-    font-size: 1.1rem;
     color: #fff;
+    font-size: 0.9rem;
 }
 
 .form-contacto {
@@ -689,7 +619,6 @@ p.small{
 }
 
 .form-contacto form .form-input input{
-    font-size: 18px;
     padding: 0.7rem;
     font-family: 'Poppins';
     background-color: #212529;
@@ -707,8 +636,7 @@ p.small{
     color: red;
 }
 
-.form-contacto form #btn-form{
-    font-size: 18px;
+/*.form-contacto form #btn-form{
     background: none;
     color: #fff;
     margin: auto;
@@ -718,11 +646,10 @@ p.small{
     cursor: pointer;
     border-radius: 0.8rem;
     border: 1px solid var(--color-blue-2);
-}
+}*/
 
 .form-contacto form .form-input textarea{
     height: 200px;
-    font-size: 18px;
     padding: 0.7rem;
     resize: none;
     font-family: 'Poppins';
@@ -741,19 +668,9 @@ p.small{
     font-size: 1.1rem;
     display: none;
 }
-.buttonload {
+#btn-loading{
     display: none;
-    font-size: 18px;
-    background: none;
-    color: #fff;
-    margin: auto;
-    width: 160px;
-    padding: 0.4rem;
-    font-family: 'poppins';
-    cursor: pointer;
-    border-radius: 0.8rem;
-    border: 1px solid var(--color-blue-2);
-  }
+}
   
   /* Add a right margin to each icon */
   .fa {
