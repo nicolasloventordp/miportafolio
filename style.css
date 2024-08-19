@@ -19,7 +19,7 @@
     outline: none;
     border: none;
     box-sizing: border-box;
-    font-size: 1rem;
+    font-size: 17px;
 }
 
 img{
@@ -46,6 +46,7 @@ body{
     cursor: pointer;
     border-radius: 0.8rem;
     border: 1px solid var(--color-blue-2);
+    transition: all 0.3s ease;
 }
 
 .container{
@@ -91,7 +92,8 @@ body{
 }
 
 .nav-logo{
-    max-width: 100px;
+    width: 120px;
+    height: 120px;
 }
 
 .nav-links{
@@ -100,14 +102,18 @@ body{
     align-items: center;
     gap: 3rem;
 }
-
+.link{
+    transition: all 0.3s ease;
+}
+.link:hover{
+    transform: scale(1.1);
+}
 .link a{
     position: relative;
     padding-bottom: 0.5rem;
     color: #fff;
     letter-spacing: 1px;
 }
-
 .link a::after{
     content: "";
     position: absolute;
@@ -115,7 +121,7 @@ body{
     width: 0;
     bottom: 0;
     left: 0;
-    background-color: var(--color-blue-2);
+    background-color: var(--color-blue-3);
     transition: all 0.3s ease;
 }
 
@@ -123,42 +129,40 @@ body{
     width: 70%;
 }
 /** HOME **/
-#home{
+.home{
     height: calc(100vh - 120px);
-    margin-top: 0;
-}
-
-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
+}
+.home .home__grid{
+    position: absolute;
     padding-top: 2rem;
     display: grid;
     grid-template-columns: 2fr 1fr;
     align-items: center;
     gap: 2rem;
 }
-
-header .content{
+.home .home__grid .home__grid-text{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 2.4rem;
+    animation: move-left-right 2s 1;
 }
-
-header .content h4{
+.home .home__grid .home__grid-text h4{
     color: #ccc;
     font-size: 1.2rem;
     font-weight: 600;
     letter-spacing: 1px;
 }
-
-header .content h1{
+.home .home__grid .home__grid-text h1{
     color: #fff;
-    font-size: 3.2rem;
+    font-size: 4rem;
     font-weight: 700;
     line-height: 5rem;
     letter-spacing: 1px;
-    animation: move-left-right 2s 1;
 }
-
 @keyframes move-left-right {
     from{
         transform: translateX(-300px);
@@ -167,69 +171,56 @@ header .content h1{
         transform: translateX(0px);
     }
 }
-
-header .content h1 span{
+@keyframes move-right-left {
+    from{
+        transform: translateX(300px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+.home .home__grid .home__grid-text h1 > span{
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px #fff;
+    font-size: 4rem;
 }
-
-header .content p{
+.home .home__grid .home__grid-text p{
     margin-bottom: 2rem;
     color: #ccc;
     letter-spacing: 1px;
     line-height: 30px;
 }
-
-.content .content__btn{
+.home .home__grid-img img{
+    width: 300px;
+    opacity: 0.6;
+    animation: move-right-left  2s 1;
 }
-
-header .image{
-    position: relative;
-}
-
-header .image::before{
-    content: "O";
+.home .home__grid::before{
+    content: "Html Css React JavaScript PHP Databases";
     position: absolute;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 28rem;
+    font-size: 8rem;
     font-weight: 400;
-    line-height: 20rem;
-    color: var(--color-blue-1);
+    color: var(--color-blue-3);
     opacity: 0.2;
     z-index: -100;
+    text-align: center;
+    height: 100%;
+    overflow: hidden;
 }
-
-header .image img{
+.home .home__grid-img img{
     max-width: 600px;
     margin: auto;
 }
 
-/*section .header{
-    margin-bottom: 3rem;
-    color: #fff;
-    text-align: center;
-    font-size: 2.25rem;
-    font-weight: 600;
-}*/
-
-section .etiqueta{
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    width: max-content;
-    padding: 8px 20px;
-    margin-bottom: 3rem;
-    text-transform: uppercase;
-    font-weight: 400;
-    color: #fff;
-    letter-spacing: 1px;
+.home .home__grid .home__grid-btn .btn:hover{
+    transform: scale(1.1);
 }
 
 /* CONOCIMIENTOS */
 section#conocimientos{
     background: var(--color-black-4);
-    padding: 8rem 2rem;
+    padding: 6rem 2rem;
 }
 #conocimientos h4{
     transition: all 0.6s ease;
@@ -246,7 +237,7 @@ section#conocimientos{
 }
 .conocimientos__content .texto h3{
     color: #fff;
-    font-size: 2rem;
+    font-size: 2.4rem;
     margin-bottom: 3rem;
     line-height: 2.5rem;
 }
@@ -280,6 +271,7 @@ section#conocimientos{
 .conocimientos__content .conocimientos__cards .item:hover{
     background: var(--color-blue-4);
     transition: all 0.6s ease;
+    transform: scale(1.1);
 }
 
 .conocimientos__content .conocimientos__cards .item:hover i{
@@ -298,6 +290,21 @@ section#conocimientos{
     color: #fff;
     font-size: 0.9rem;
 }
+
+.bounce2 {
+    view-timeline-name: --image;
+	view-timeline-axis: block;
+    animation-timeline: --image;
+	animation-name: bounce2;
+    animation-range: entry 100% cover 30%;
+	animation-fill-mode: both;
+  }
+
+  @keyframes bounce2 {
+      0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+      40% {transform: translateY(-40px);}
+      60% {transform: translateY(-15px);}
+  }
 
 .ri-html5-fill{
     color: #ff5733;
@@ -540,14 +547,18 @@ p.small{
     transition: margin-top 0.6s ease-out;
     position: relative;
 }
+
 /* CONTACTO */
+
+section#contacto{
+    padding: 6rem 2rem;
+}
 #contacto:hover h4{
     box-shadow: 0px 0px 14px 0px var(--color-blue-2);
 }
 .grid-contacto{
     display: grid;
-    grid-template-columns: 220px auto;
-    padding: 2rem;
+    grid-template-columns: 180px auto;
     height: 600px;
 }
 
@@ -556,13 +567,11 @@ p.small{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center;
 }
 
 .grid-contacto .info-contacto .info-contacto__item{
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin-bottom: 2rem;
 }
 
@@ -570,6 +579,7 @@ p.small{
     font-size: 2.6rem;
     color: var(--color-blue-3);
     margin-bottom: 0.6rem;
+    margin-left: 1rem;
 }
 
 .grid-contacto .info-contacto .info-contacto__item .info-contacto__item-title{
@@ -586,7 +596,7 @@ p.small{
 .form-contacto {
     width: 100%;
     margin: auto;
-    padding: 0rem 2rem;
+    padding-left: 2rem;
 }
 
 .form-contacto form{
